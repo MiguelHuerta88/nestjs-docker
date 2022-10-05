@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  nestdocker:
+    container_name: nestdocker
+    restart: always
+
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    build: .
+    #   context: .
+    #   target: dependencies
+    expose:
+      - "3000"
+    ports:
+      - 3000:3000
+      - 9696:9696
+    volumes:
+      - ./:/home/node/app
+    command: npm run start:dev
