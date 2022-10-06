@@ -13,6 +13,8 @@ export class CartController {
     metadata: Metadata,
     call: ServerUnaryCall<any, any>,
   ): Cart {
+    console.log('Request came in');
+    console.log(data);
     const items = [
       {
         id: '1',
@@ -30,7 +32,10 @@ export class CartController {
       },
     ];
 
-    return items.find(({ id }) => parseInt(id) === data.id);
+    const item = items.find(({ id }) => parseInt(id) === data.id);
+    console.log('item');
+    console.log(item);
+    return item;
   }
 
   @GrpcMethod('CartsService', 'GetCartByVisit')

@@ -19,3 +19,9 @@ services:
     volumes:
       - ./:/home/node/app
     command: npm run start:dev
+    networks:
+      - dockernet
+networks:
+  dockernet:
+    name: dockernet
+    driver: bridge
