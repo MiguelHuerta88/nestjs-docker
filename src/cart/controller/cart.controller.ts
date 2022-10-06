@@ -13,9 +13,6 @@ export class CartController {
     metadata: Metadata,
     call: ServerUnaryCall<any, any>,
   ): Cart {
-    console.log(`Request came in with data`);
-    console.log(data);
-
     const items = [
       {
         id: '1',
@@ -42,9 +39,6 @@ export class CartController {
     metadata: Metadata,
     call: ServerUnaryCall<any, any>,
   ): Cart {
-    console.log('inside getCartByVisit');
-    console.log(data);
-
     const items = [
       {
         id: '1',

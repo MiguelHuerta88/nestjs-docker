@@ -7,12 +7,9 @@ import { CartServiceInterface } from '../interfaces/cart-service.interface';
 export class CartService implements OnModuleInit {
   private cartService: CartServiceInterface;
 
-  constructor(@Inject('CART_PACKAGE') private client: ClientGrpc) {
-    console.log('here');
-  }
+  constructor(@Inject('CART_PACKAGE') private client: ClientGrpc) {}
 
   onModuleInit() {
-    console.log(this.client.getService<CartServiceInterface>('CartsService'));
     this.cartService =
       this.client.getService<CartServiceInterface>('CartsService');
   }
