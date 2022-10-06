@@ -17,6 +17,7 @@ export class AppService implements OnModuleInit {
   constructor(@Inject('HERO_PACKAGE') private client: ClientGrpc) {}
 
   onModuleInit() {
+    console.log(this.client.getService<HeroesService>('HeroesService'));
     this.heroesService = this.client.getService<HeroesService>('HeroesService');
   }
 

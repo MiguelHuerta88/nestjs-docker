@@ -12,6 +12,8 @@ export class HeroesController {
     metadata: Metadata,
     call: ServerUnaryCall<any, any>,
   ): Hero {
+    console.log(`Request came in with data`);
+    console.log(data);
     const items = [
       { id: 1, name: 'Miguel' },
       { id: 2, name: 'Susie' },

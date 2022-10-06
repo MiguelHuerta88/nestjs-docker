@@ -13,8 +13,8 @@ async function bootstrap() {
     {
       transport: Transport.GRPC,
       options: {
-        package: 'hero',
-        protoPath: join(__dirname, 'hero/hero.proto'),
+        package: 'cart',
+        protoPath: join(__dirname, 'cart/cart.proto'),
         url: '0.0.0.0:3000',
       },
     },

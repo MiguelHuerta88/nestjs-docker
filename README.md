@@ -37,6 +37,7 @@ $ npm install
 ```bash
 $ docker-compose up --build
 ```
+App will be running as microservice at localhost:3000
 
 ## Test
 
